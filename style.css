@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500;600;700;900&display=swap');
+/*SANS Inconsolata W300, 500, 600, 900*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700;900&display=swap');
+/*SERIF Playfair Display W400, 500, 700, 900 */
+
+:root {
+    /* COLORS */
+    /* Primary */
+    --cl-primary100: #2C49F8;
+    --cl-primary20: #DCE2FE;
+    --cl-primary10: #EEF0FE;
+    /* Secondary */
+    --cl-secondary-white: #FFFFFF;
+    --cl-secondary-black: #000000;
+    --cl-secondary-blue-L: #A8A9B4;
+    --cl-secondary-blue-M: #8B8EA3;
+    --cl-secondary-blue-D: #565A74;
+    /* Success */
+    --cl-success100: #3D9E53;
+    --cl-success10: #ECF5EE;
+    /* Warning */
+    --cl-warning100: #FEC971;
+    --cl-warning50: #FFE4B8;
+    --cl-warning20: #FFF4E3;
+    /* Danger */
+    --cl-danger100: #F77878;
+    --cl-danger50: #FBBCBC;
+    --cl-danger10: #FEF1F1;
+    /* FONTS */
+    --sans: 'Inconsolata', monospace;
+    --serif: 'Playfair Display', serif;
+    /* TRANSITION */
+    --transition: 0.2s;
+    /* SVG COLOR FILTERS */
+    --f-white: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+    --f-grey: brightness(0) saturate(100%) invert(35%) sepia(1%) saturate(1978%) hue-rotate(194deg) brightness(94%) contrast(87%);
+}
+
+body {
+    margin: 0;
+    font-family: var(--sans);
+}
+
+/* CONTAINERS WIDTH */
+.top-nav, .sub-nav, main { width: 1105px; margin: 0 auto; }
+/* CONTAINERS WIDTH */
+
+/* ======== HEADER ======== */
+
+header {
+    width: 100%;
+    height: 121px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.top-bg {
+    width: 100%;
+    height: 65px;
+    background-color: var(--cl-secondary-black);
+    position: relative;
+    z-index: -3;
+}
+
+.sub-bg {
+    width: 100%;
+    height: 55px;
+    background-color: var(--cl-secondary-white);
+    position: relative;
+    z-index: -4;
+}
+
+.top-nav {
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LOGO */
+
+.logo-container {
+    position: absolute;
+    display: flex;
+    left: -109px;
+}
+
+.logo {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border: 1px solid var(--cl-secondary-blue-D);
+    border-radius: 11px;
+    margin-right: 8px;
+    background: url(files/logo.svg) center no-repeat;
+}
+
+.logo::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -4px;
+    left: -4px;
+    background-color: var(--cl-secondary-white);
+    border: solid var(--cl-secondary-white);
+    border-width: 4px 4px 13px 4px;
+    border-radius: 13px 13px 0 0;
+    z-index: -1;
+    display: none;
+
+}
+
+.logo-dropdown {
+    position: absolute;
+    background-color:var(--cl-secondary-white);
+    width: 203px;
+    height: 99px;
+    top: 44px;
+    left: -22px;
+    z-index: -2;
+    display: none;
+}
+
+.logo-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+}
+
+.logo-icon-container img {
+    width: 8px;
+    height: auto;
+}
+
+.l-i-u {
+    margin-bottom: 2.8px;
+}
+
+.l-i-d {
+    margin-top: 2.8px;
+}
+
+.l-i-u path {
+    stroke: var(--cl-secondary-blue-D);
+}
+
+.l-i-d path {
+    stroke: var(--cl-secondary-blue-D);
+}
+
+#logo-switch {
+    display: none;
+}
+
+/* DROPDOWN */
+.logo-container:hover .logo{
+    border-color: var(--cl-secondary-white);
+    transition: var(--transition);
+}
+
+.logo-container:hover .logo-icon-container svg path{
+    stroke: var(--cl-secondary-white);
+    transition: var(--transition);
+}
+
+.logo-switch-label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.logo-container:focus > .logo {
+    border-color: var(--cl-secondary-white);
+    background-color: var(--cl-primary100);
+    transition: 0ms;
+}
+
+.logo-container:focus > .logo::after, .logo-container:focus > .logo .logo-dropdown {
+    display: block;
+    transition: 0.1ms;
+}
+
+/* #logo-switch:checked + .logo {
+    border-color: var(--cl-secondary-white);
+    background-color: var(--cl-primary100);
+    transition: 0ms;
+}
+
+#logo-switch:checked ~ .logo-icon-container svg path {
+    stroke: var(--cl-secondary-white);
+} 
+
+
+
+#logo-switch:checked + .logo::after, #logo-switch:checked + .logo > .logo-dropdown {
+    display: block;
+    transition: 0.1ms;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+/* SCROLL */
+main {
+    height: 1366px;
+}

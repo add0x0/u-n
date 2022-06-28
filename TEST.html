@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 50px;
+        }
+
+        .bwrap {
+            overflow: auto;
+            display: flex;
+            background-color: grey;
+        }
+
+        .col {
+            width: 100px;
+            height: 60px;
+            margin: 10px 20px;
+            background-color: aqua;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .bwrap:hover > .col {
+            visibility: visible;
+            opacity: 1;
+            transition: 0.5s;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="bwrap">
+        <div class="col a"></div>
+        <div class="col b"></div>
+    </div>
+
+</body>
+</html>
