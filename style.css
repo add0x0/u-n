@@ -195,12 +195,12 @@ header {
 /* DROPDOWN */
 
 .logo-container:hover .logo{
-    border-color: var(--cl-secondary-white);
+    border-color: var(--cl-primary20);
     transition: var(--transition);
 }
 
 .logo-container:hover .logo-icon-container svg path{
-    stroke: var(--cl-secondary-white);
+    stroke: var(--cl-primary20);
     transition: var(--transition);
 }
 
@@ -237,7 +237,7 @@ header {
 
 /* NAV */
 
-nav {
+nav, .nav-item {
     display: flex;
     align-items: center;
 }
@@ -246,18 +246,129 @@ nav {
     color: var(--cl-secondary-blue-M);
     margin-right: 25px;
     text-decoration: none;
+}
+
+.nav-item span {
     font-size: 15px;
-    line-height: 15px;
     font-weight: 400;
 }
 
+.item-icon {
+    margin-right: 7px;
+    display: block;
+}
 
+.item-icon path {
+    fill: var(--cl-secondary-blue-M);
+}
 
+.nav-item:hover span {
+    color: var(--cl-primary20);
+    transition: var(--transition);
+}
 
+.nav-item:hover .item-icon path {
+    fill: var(--cl-primary20);
+    transition: var(--transition);
+}
 
+.nav-item:hover .active-page path {
+    stroke: var(--cl-primary20);
+    transition: var(--transition);
+}
 
+.active-page {
+    margin-left: 4px;
+    margin-top: 1.5px;
+}
+
+.active-page path {
+    fill: none;
+    stroke: var(--cl-secondary-blue-M);
+}
+
+/* PROFILE */
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-ic {
+    display: block;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.profile-ic path {
+    fill: var(--cl-secondary-blue-M);
+}
+
+.profile-ic:hover path {
+    fill: var(--cl-primary20);
+    transition: var(--transition);
+}
+
+.bell {
+    position: relative;
+    cursor: pointer;
+}
+
+.bell::after {
+    content: '3';
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--cl-secondary-black);
+    background-color: var(--cl-secondary-blue-M);
+    border-radius: 1890px;
+    color: var(--cl-secondary-white);
+    font-size: 9px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 16px;
+    top: -6px;
+    left: 3px;
+}
+
+.bell:hover::after {
+    background-color: var(--cl-primary100);
+    transition: var(--transition);
+}
+
+.bell:hover .profile-ic path {
+    fill: var(--cl-primary20);
+    transition: var(--transition);
+}
 
 /* SCROLL */
 main {
     height: 1366px;
+}
+
+.profpic {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--cl-secondary-white);
+    color: var(--cl-primary100);
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.profpic-ic {
+    margin: 0 6px 0 9px;
+    fill: var(--cl-secondary-blue-M);
+    cursor: pointer;
+}
+
+.profpic:hover + .profpic-ic, .profpic-ic:hover {
+    fill: var(--cl-primary20);
+    transition: var(--transition);
 }
